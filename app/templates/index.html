@@ -1,0 +1,14 @@
+
+{% extends "base.html" %}
+
+{% block content %}
+    <div class="container">
+      <div class="jumbotron">
+    <h3>Hello, {{ user.username }}!</h3>
+  </div>
+    <h2>Your Today's news feed is : </h2>
+    {% for post in posts %}
+    <div><p> {{ post.author.username }} tells : <strong>{{ post.body }}</strong></p></div>
+    {% endfor %}
+    <h2>Thanks for reading</h2>
+ {% endblock %}
